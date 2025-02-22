@@ -1,8 +1,8 @@
 // Base Sol rifle
 
 /obj/item/gun/ballistic/automatic/sol_rifle
-	name = "\improper MMR-2543E"
-	desc = "A heavy assault rifle chambered in .40Sol, with a comically fast fire-rate for weapons of it's class."
+	name = "\improper Carwo-Cawil Battle Rifle"
+	desc = "A heavy battle rifle firing .40 Sol. Commonly seen in the hands of SolFed military types. Accepts any standard SolFed rifle magazine."
 
 	icon = 'modular_nova/modules/modular_weapons/icons/obj/company_and_or_faction_based/carwo_defense_systems/guns48x.dmi'
 	icon_state = "infanterie"
@@ -31,16 +31,14 @@
 	suppressed_sound = 'modular_nova/modules/modular_weapons/sounds/suppressed_rifle.ogg'
 	can_suppress = TRUE
 
-	suppressor_x_offset = 2
-	suppressor_y_offset = 1
+	suppressor_x_offset = 12
 
 	burst_size = 1
-	fire_delay = 0.30 SECONDS
+	fire_delay = 0.45 SECONDS
 	actions_types = list()
 
-	spread = 2
-	projectile_wound_bonus = 10
-	projectile_damage_multiplier = 0.75
+	spread = 7.5
+	projectile_wound_bonus = -10
 
 /obj/item/gun/ballistic/automatic/sol_rifle/Initialize(mapload)
 	. = ..()
@@ -61,14 +59,14 @@
 /obj/item/gun/ballistic/automatic/sol_rifle/examine_more(mob/user)
 	. = ..()
 
-	. += "The MMR-2543 is the current standard service rifle for all branches of the Sol Federation Armed Forces. \
-		The MMR-2543 was initially created for use by the Sagittarian Triumvirate’s military, \
-		with its adoption by SolFed coming a few years later. Thanks to both the prestige the weapon gained from being adopted \
-		by two of the most prominent military forces in SolFed, \
-		and its modular design making it easily adapted to different requirements, it is currently the most widely adopted rifle in SolFed with a wide range of different users. \
-		This variant is the Espatier model and is the standard weapon for SolFed’s Espatier Corps. It features a slim and compact design optimized for the close-range engagements \
-		Espatiers typically find themselves in, while still retaining effectiveness at long range. A computerized sight allows for quick and easy adjustment for engagements at different ranges, \
-		and in a wide range of environments, while a swappable internal heatsink protects the weapon from overheating whilst firing in a vacuum."
+	. += "The Carwo-Cawil rifles are built by Carwo for \
+		use by SolFed's various infantry branches. Following the rather reasonable \
+		military requirements of using the same few cartridges and magazines, \
+		the lifespans of logistics coordinators and quartermasters everywhere \
+		were lengthened by several years. While typically only for military sale \
+		in the past, the recent collapse of certain unnamed weapons manufacturers \
+		has caused Carwo to open many of its military weapons to civilian sale, \
+		which includes this one."
 
 	return .
 
@@ -78,7 +76,7 @@
 // Sol marksman rifle
 
 /obj/item/gun/ballistic/automatic/sol_rifle/marksman
-	name = "\improper MMR-2543I"
+	name = "\improper Cawil Marksman Rifle"
 	desc = "A heavy marksman rifle commonly seen in the hands of SolFed military types. Accepts any standard SolFed rifle magazine."
 
 	icon_state = "elite"
@@ -87,15 +85,11 @@
 
 	spawn_magazine_type = /obj/item/ammo_box/magazine/c40sol_rifle
 
-	fire_delay = 0.4 SECONDS
-	
-	suppressor_x_offset = 1
-	suppressor_y_offset = 1
+	fire_delay = 0.75 SECONDS
 
-	burst_size = 3
-	spread = 5.5
-	projectile_damage_multiplier = 1
-	projectile_wound_bonus = 3
+	spread = 0
+	projectile_damage_multiplier = 1.2
+	projectile_wound_bonus = 10
 
 /obj/item/gun/ballistic/automatic/sol_rifle/marksman/Initialize(mapload)
 	. = ..()
@@ -108,15 +102,11 @@
 /obj/item/gun/ballistic/automatic/sol_rifle/marksman/examine_more(mob/user)
 	. = ..()
 
-	. = "The MMR-2543 is the current standard service rifle for all branches of the Sol Federation Armed Forces. \
-		The MMR-2543 was initially created for use by the Sagittarian Triumvirate’s military, \
-		with its adoption by SolFed coming a few years later. Thanks to both the prestige the weapon gained from \
-		being adopted by two of the most prominent military forces in SolFed, and its modular \
-		design making it easily adapted to different requirements, it is currently the most widely adopted rifle \
-		in SolFed with a wide range of different users. This variant is the Infantry model and is the primary rifle \
-		for both the SolFed Hydro Corps and Atmospheric Corps. It features excellent accuracy and durability, \
-		a specialized two shot burst designed to fire off two rounds before recoil can impact the shooter, \
-		and a more moderate rate of automatic fire to help preserve ammunition during long engagements."
+	. += "This particlar variant is a marksman rifle. \
+		Automatic fire was forsaken for a semi-automatic setup, a more fitting \
+		stock, and more often than not a scope. Typically also seen with smaller \
+		magazines for convenience for the shooter, but as with any other Sol \
+		rifle, all standard magazine types will work."
 
 	return .
 
@@ -130,7 +120,7 @@
 	desc = "A hefty machinegun commonly seen in the hands of SolFed military types. Accepts any standard SolFed rifle magazine."
 
 	icon_state = "qarad"
-	worn_icon_state = "qarad"
+	worn_icon_state = "outomaties"
 	inhand_icon_state = "outomaties"
 
 	bolt_type = BOLT_TYPE_OPEN
