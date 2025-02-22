@@ -794,6 +794,17 @@
 	attack_verb_continuous = list("gnaws", "gnashes", "chews")
 	attack_verb_simple = list("gnaw", "gnash", "chew")
 
+/obj/item/toy/plush/shark/fish
+	name = "fish plushie"
+	desc = "Fish the stuffed (:dead:) plush."
+	lefthand_file = 'icons/mob/inhands/items/plushes_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/plushes_righthand.dmi'
+	icon_state = "blahaj2"
+	inhand_icon_state = "blahaj2"
+	attack_verb_continuous = list("fishs", "fishings", "sexing")
+	attack_verb_simple = list("fish", "slap", "sex")
+	squeak_override = list('sound/items/toy_squeak/fish.ogg' = 1)
+
 /obj/item/toy/plush/donkpocket
 	name = "donk pocket plushie"
 	desc = "The stuffed companion of choice for the seasoned traitor."

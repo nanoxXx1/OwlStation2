@@ -7,9 +7,10 @@
 	desc = "Automagically transforms into a random arcade machine. If you see this while in a shift, please create a bug report."
 	icon_state = "arcade"
 	loot = list(
-		/obj/machinery/computer/arcade/orion_trail = 49,
-		/obj/machinery/computer/arcade/battle = 49,
-		/obj/machinery/computer/arcade/amputation = 2,
+		/obj/machinery/computer/arcade/orion_trail = 40,
+		/obj/machinery/computer/arcade/battle = 40,
+		/obj/machinery/computer/arcade/amputation = 10,
+		/obj/machinery/computer/arcade/amputation/festive = 10,
 	)
 
 /obj/effect/spawner/random/entertainment/musical_instrument
@@ -137,6 +138,8 @@
 		/obj/item/dice/d10,
 		/obj/item/dice/d12,
 		/obj/item/dice/d20,
+		/obj/item/dice/d20/fate/stealth/one_use,
+		/obj/item/dice/d20/fate/stealth/cursed/one_use,
 	)
 
 /obj/effect/spawner/random/entertainment/cigarette_pack

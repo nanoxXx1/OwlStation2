@@ -64,7 +64,7 @@ Include = @ STEALTH SOUND DEBUG
 Exclude =
 Edit =
 
-Name = Game Master
+Name = Gay Master
 Include = EVERYTHING
 Exclude =
 Edit = EVERYTHING
